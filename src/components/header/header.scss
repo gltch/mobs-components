@@ -1,0 +1,83 @@
+$logo_width: 218px;
+
+div.header {
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #f9f9f9;
+
+    height: 48px;
+    line-height: 48px;
+    vertical-align: middle;
+    width: 100%;
+    overflow: hidden;
+    
+    .logo {
+        position: absolute;
+        left: calc(50% - (#{$logo_width} / 2));
+        width: $logo_width;
+        padding-top: 12px;
+        transition: left 0.4s;
+        -webkit-font-smoothing: antialiased;
+
+        .m-wrapper {
+            transition: all .2s ease-in-out;
+        }
+
+        #path-1,
+        #path-2,
+        #path-3,
+        #path-4,
+        #path-5,
+        #path-6,
+        #path-7 {
+            transition: opacity 0.4s;
+            opacity: 1;
+        }
+
+        #app-bar-logo__path {
+            fill: #ff3a30 !important;
+        }
+    }
+
+    a {
+        float: right;
+        margin-right: 50px;
+        color: #000;
+        cursor: pointer;
+    }
+
+    a:hover {
+        color: #DC291E;
+    }
+}
+
+div.header.scrolled {
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+
+    .logo {
+
+        left: calc(50% - 31px);
+
+        .m-wrapper {
+
+            transform: scale(1);
+            transform: translateY(2px);
+
+        }
+
+        #path-1,
+        #path-2,
+        #path-3,
+        #path-4,
+        #path-5,
+        #path-6,
+        #path-7 {
+            opacity: 0;
+        }
+
+    }
+
+}
