@@ -226,7 +226,6 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, "Header", function() { return /* reexport */ header_header; });
-__webpack_require__.d(__webpack_exports__, "Breadcrumbs", function() { return /* reexport */ breadcrumbs_breadcrumbs; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -517,7 +516,6 @@ var header_component = normalizeComponent(
 
 /* harmony default export */ var header_header = (header_component.exports);
 // CONCATENATED MODULE: ./src/components.js
-
 
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib-no-default.js
