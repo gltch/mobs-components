@@ -514,8 +514,10 @@ var header_component = normalizeComponent(
 /* harmony default export */ var header_header = (header_component.exports);
 // CONCATENATED MODULE: ./src/components.js
 
+
 /* harmony default export */ var components = ({
-  Header: header_header
+  Header: header_header,
+  Breadcrumbs: breadcrumbs_breadcrumbs
 });
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
