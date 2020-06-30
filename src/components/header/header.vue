@@ -3,7 +3,7 @@
 </style>
 
 <template>
-    <div v-bind:class="['header', scrolled ? 'scrolled': '']">
+    <div v-bind:class="['header', scrolled ? 'scrolled': '', hasBreadcrumbs ? 'breadcrumbs' : '']">
 
       <a v-if="isLoggedIn" @click="logout">Logout</a>
 
@@ -20,7 +20,9 @@
           </g>
       </svg>
 
-      
+      <div v-if="hasBreadcrumbs" v-bind:class="['breadcrumbs-container', scrolled ? '' : 'container']">
+        <Breadcrumbs :breadcrumbs="breadcrumbs" />
+      </div>
 
     </div>
     

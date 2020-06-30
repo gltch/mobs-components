@@ -10,6 +10,7 @@ div.header {
 
     height: 48px;
     line-height: 48px;
+    
     vertical-align: middle;
     width: 100%;
     overflow: hidden;
@@ -52,6 +53,19 @@ div.header {
     a:hover {
         color: #DC291E;
     }
+
+    .breadcrumbs-container {
+        margin-top: 47px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid #e8e8e8;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+div.header.breadcrumbs {
+    height: 89px;
 }
 
 div.header.scrolled {
@@ -78,6 +92,14 @@ div.header.scrolled {
             opacity: 0;
         }
 
+    }
+
+    .breadcrumbs-container {
+        border-top: 1px solid #e8e8e8;
+        border-bottom: none;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
