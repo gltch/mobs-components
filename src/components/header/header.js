@@ -18,6 +18,7 @@ export default {
 
         if (this.$store) {
           return this.$store.getters.isLoggedIn 
+          
         } else {
           return false;
         }
