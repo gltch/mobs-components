@@ -2,9 +2,11 @@
   "name": "mobs-components",
   "version": "0.1.0",
   "private": true,
+  "main": "./dist/mobs-components.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-library": "vue-cli-service build --target lib --name mobs-components src/components.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

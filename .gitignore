@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-/dist
+# /dist # Since this is a component library - we store the distribution...
 
 # local env files
 .env.local
