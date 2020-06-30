@@ -2,6 +2,15 @@
 
 $logo_width: 218px;
 
+div.header-back {
+    width: 100%;
+    height: 50px;
+}
+
+div.header-back.breadcrumbs {
+    height: 90px;
+}
+
 div.header {
 
     position: fixed;
