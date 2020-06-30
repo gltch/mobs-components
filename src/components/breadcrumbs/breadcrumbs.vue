@@ -3,7 +3,7 @@
 </style>
 
 <template>
-    <div v-bind:class="['breadcrumbs', 'container', scrolled ? 'scrolled': '']">
+    <div v-bind:class="['breadcrumbs', 'container']">
 
       <a v-for="crumb in breadcrumbs" :key="crumb.name" :href="crumb.href">{{crumb.name}}</a>
 

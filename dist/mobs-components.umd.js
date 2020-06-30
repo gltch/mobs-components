@@ -258,12 +258,12 @@ var staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/header/header.vue?vue&type=template&id=298eb75b&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"12a33afb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/breadcrumbs/breadcrumbs.vue?vue&type=template&id=0d1cd464&
-var breadcrumbsvue_type_template_id_0d1cd464_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['breadcrumbs', 'container', _vm.scrolled ? 'scrolled': '']},_vm._l((_vm.breadcrumbs),function(crumb){return _c('a',{key:crumb.name,attrs:{"href":crumb.href}},[_vm._v(_vm._s(crumb.name))])}),0)}
-var breadcrumbsvue_type_template_id_0d1cd464_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"12a33afb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/breadcrumbs/breadcrumbs.vue?vue&type=template&id=49b2aa22&
+var breadcrumbsvue_type_template_id_49b2aa22_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['breadcrumbs', 'container']},_vm._l((_vm.breadcrumbs),function(crumb){return _c('a',{key:crumb.name,attrs:{"href":crumb.href}},[_vm._v(_vm._s(crumb.name))])}),0)}
+var breadcrumbsvue_type_template_id_49b2aa22_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/breadcrumbs/breadcrumbs.vue?vue&type=template&id=0d1cd464&
+// CONCATENATED MODULE: ./src/components/breadcrumbs/breadcrumbs.vue?vue&type=template&id=49b2aa22&
 
 // CONCATENATED MODULE: ./src/components/breadcrumbs/breadcrumbs.js
 /* harmony default export */ var breadcrumbs = ({
@@ -401,8 +401,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   breadcrumbs_breadcrumbsvue_type_script_lang_js_,
-  breadcrumbsvue_type_template_id_0d1cd464_render,
-  breadcrumbsvue_type_template_id_0d1cd464_staticRenderFns,
+  breadcrumbsvue_type_template_id_49b2aa22_render,
+  breadcrumbsvue_type_template_id_49b2aa22_staticRenderFns,
   false,
   null,
   null,
@@ -431,7 +431,11 @@ var component = normalizeComponent(
   },
   computed: {
     isLoggedIn: function isLoggedIn() {
-      return this.$store.getters.isLoggedIn;
+      if (this.$store) {
+        return this.$store.getters.isLoggedIn;
+      } else {
+        return false;
+      }
     },
     hasBreadcrumbs: function hasBreadcrumbs() {
       return this.breadcrumbs && this.breadcrumbs.length > 0;
@@ -450,9 +454,11 @@ var component = normalizeComponent(
     logout: function logout() {
       var _this = this;
 
-      this.$store.dispatch('logout').then(function () {
-        _this.$router.push('/login');
-      });
+      if (this.$store) {
+        this.$store.dispatch('logout').then(function () {
+          _this.$router.push('/login');
+        });
+      }
     }
   }
 });
