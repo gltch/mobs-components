@@ -1335,7 +1335,7 @@ var breadcrumbsvue_type_template_id_15df4167_staticRenderFns = []
         filteredCrumbs.push(this.breadcrumbs[0]);
         filteredCrumbs.push({
           name: "...",
-          href: this.breadcrumbs[this.breadcrumbs.length - 3].path
+          href: this.breadcrumbs[this.breadcrumbs.length - 3].href
         });
         filteredCrumbs.push(this.breadcrumbs[this.breadcrumbs.length - 2]);
         filteredCrumbs.push(this.breadcrumbs[this.breadcrumbs.length - 1]);

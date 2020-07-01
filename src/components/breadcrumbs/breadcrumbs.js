@@ -5,8 +5,6 @@ export default {
 
     filteredBreadcrumbs: function() {
 
-      
-
       if (this.breadcrumbs.length > 3) {
 
         var filteredCrumbs = [];
@@ -15,7 +13,7 @@ export default {
         filteredCrumbs.push({
 
           name: "...",
-          href: this.breadcrumbs[this.breadcrumbs.length - 3].path
+          href: this.breadcrumbs[this.breadcrumbs.length - 3].href
 
         });
         filteredCrumbs.push(this.breadcrumbs[this.breadcrumbs.length - 2]);
