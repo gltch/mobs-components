@@ -31,6 +31,11 @@ html, body {
     }
   }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px !important;
