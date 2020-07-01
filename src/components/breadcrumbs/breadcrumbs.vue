@@ -5,7 +5,9 @@
 <template>
     <div v-bind:class="['breadcrumbs', 'container']">
 
-      <a v-for="crumb in breadcrumbs" :key="crumb.name" :href="crumb.href">{{crumb.name}}</a>
+      <a v-for="crumb in filteredBreadcrumbs" :key="crumb.href" :href="crumb.href" @click.prevent='breadcrumbClicked(crumb)'>
+        {{crumb.name}}
+      </a>
 
     </div>
     

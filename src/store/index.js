@@ -8,6 +8,14 @@ export default new Vuex.Store({
     breadcrumbs: [
       { name: 'Home', href: '/' },
       { name: 'Investments and Savings', href: '/investments' },
+      { name: 'Investments and Savings', href: '/investments' },
+      { name: 'Investments and Savings', href: '/investments' },
+      { name: 'Investments and Savings', href: '/investments' },
+      { name: 'Investments and Savings', href: '/investments' },
+      { name: 'Investments and Savings', href: '/investments' },
+      { name: 'Investments and Savings', href: '/investments' },
+      { name: 'Investments and Savings', href: '/investments' },
+      { name: 'Investments and Savings', href: '/investments' },
     ]
   },
   mutations: {

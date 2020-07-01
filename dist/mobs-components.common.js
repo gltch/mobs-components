@@ -1309,18 +1309,46 @@ var staticRenderFns = []
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
 var vuex_esm = __webpack_require__("2f62");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"12a33afb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/breadcrumbs/breadcrumbs.vue?vue&type=template&id=49b2aa22&
-var breadcrumbsvue_type_template_id_49b2aa22_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['breadcrumbs', 'container']},_vm._l((_vm.breadcrumbs),function(crumb){return _c('a',{key:crumb.name,attrs:{"href":crumb.href}},[_vm._v(_vm._s(crumb.name))])}),0)}
-var breadcrumbsvue_type_template_id_49b2aa22_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"12a33afb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/breadcrumbs/breadcrumbs.vue?vue&type=template&id=15df4167&
+var breadcrumbsvue_type_template_id_15df4167_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:['breadcrumbs', 'container']},_vm._l((_vm.filteredBreadcrumbs),function(crumb){return _c('a',{key:crumb.href,attrs:{"href":crumb.href},on:{"click":function($event){$event.preventDefault();return _vm.breadcrumbClicked(crumb)}}},[_vm._v(" "+_vm._s(crumb.name)+" ")])}),0)}
+var breadcrumbsvue_type_template_id_15df4167_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/breadcrumbs/breadcrumbs.vue?vue&type=template&id=49b2aa22&
+// CONCATENATED MODULE: ./src/components/breadcrumbs/breadcrumbs.vue?vue&type=template&id=15df4167&
 
 // CONCATENATED MODULE: ./src/components/breadcrumbs/breadcrumbs.js
 /* harmony default export */ var breadcrumbs = ({
-  props: ['breadcrumbs']
+  props: ['breadcrumbs'],
+  computed: {
+    filteredBreadcrumbs: function filteredBreadcrumbs() {
+      if (this.breadcrumbs.length > 3) {
+        var filteredCrumbs = [];
+        filteredCrumbs.push(this.breadcrumbs[0]);
+        filteredCrumbs.push({
+          name: "...",
+          href: this.breadcrumbs[this.breadcrumbs.length - 3].path
+        });
+        filteredCrumbs.push(this.breadcrumbs[this.breadcrumbs.length - 2]);
+        filteredCrumbs.push(this.breadcrumbs[this.breadcrumbs.length - 1]);
+        return filteredCrumbs;
+      } else {
+        return this.breadcrumbs;
+      }
+    }
+  },
+  methods: {
+    breadcrumbClicked: function breadcrumbClicked(crumb) {
+      if (this.$store) {
+        this.$store.dispatch('breadcrumbClicked', crumb);
+      } else {
+        console.log('This only works with Vuex');
+      }
+    }
+  }
 });
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/breadcrumbs/breadcrumbs.vue?vue&type=script&lang=js&
+//
+//
 //
 //
 //
@@ -1452,8 +1480,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   breadcrumbs_breadcrumbsvue_type_script_lang_js_,
-  breadcrumbsvue_type_template_id_49b2aa22_render,
-  breadcrumbsvue_type_template_id_49b2aa22_staticRenderFns,
+  breadcrumbsvue_type_template_id_15df4167_render,
+  breadcrumbsvue_type_template_id_15df4167_staticRenderFns,
   false,
   null,
   null,

@@ -12,7 +12,7 @@ export default {
           scrolled: window.pageYOffset > 0
       }
   },
-  computed : mapState({
+  computed: mapState({
 
     breadcrumbs: state => state.breadcrumbs,
     
